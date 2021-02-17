@@ -3,6 +3,7 @@ name: C++ with CMake CI
 on: [push]
 
 jobs:
+  shm:
     runs-on: ubuntu-latest
     steps:
     - name: Check out code
@@ -12,5 +13,5 @@ jobs:
     - name: Compile
     - working-directory: shm/build
     - run: |
-        cmake ..
-        make
+      cmake ..
+      make
