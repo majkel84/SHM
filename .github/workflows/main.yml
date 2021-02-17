@@ -8,13 +8,10 @@ jobs:
     steps:
     - name: Check out code
       uses: actions/checkout@master
-    - name: mkdir shm/build
-      run: mkdir shm/build
+    - name: mkdir build/
+      run: mkdir build/
     - name: Compile
-      working-directory: shm/build
+      working-directory: build/
       run: |
         cmake ..
         make
-    - name: Run Tests
-      working-directory: shm/build
-      run: ctest -V
