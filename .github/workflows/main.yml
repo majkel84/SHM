@@ -7,14 +7,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Check out code
-    - uses: actions/checkout@master
+      uses: actions/checkout@master
     - name: mkdir shm/build
-    - run: mkdir shm/build
+      run: mkdir shm/build
     - name: Compile
-    - working-directory: shm/build
-    - run: |
-      cmake ..
-      make
+      working-directory: shm/build
+      run: |
+        cmake ..
+        make
     - name: Run Tests
-    - working-directory: shm/build
-    - run: ctest -V
+      working-directory: shm/build
+      run: ctest -V
