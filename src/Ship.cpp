@@ -6,6 +6,20 @@ Ship::Ship(size_t id, std::string& name, size_t speed, size_t maxCrew, size_t ca
 
 Ship::~Ship() {}
 
+Ship& Ship::operator+=(const int newCrew) {
+    if (crew_ += newCrew < maxCrew_) {
+        crew_ += newCrew;
+    }
+    return *this;
+}
+
+Ship& Ship::operator-=(const int newCrew) {
+    if (crew_ -= newCrew < 0) {
+        crew_ -= newCrew;
+    }
+    return *this;
+}
+
 size_t Ship::getId() {
     return id_;
 }
