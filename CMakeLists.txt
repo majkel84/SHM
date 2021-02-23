@@ -41,6 +41,7 @@ project(SHM)
 
 set(SRC_LIST
     src/Ship.cpp
+    src/Cargo.cpp
 )
 
 set(TEST_SRC_LIST
@@ -59,3 +60,5 @@ target_compile_options(${PROJECT_NAME} PRIVATE ${FLAGS})
 add_executable(${PROJECT_NAME}-ut ${TEST_SRC_LIST})
 target_link_libraries(${PROJECT_NAME}-ut ${PROJECT_NAME}-lib gtest)
 target_compile_options(${PROJECT_NAME}-ut PRIVATE ${FLAGS})
+
+add_test(NAME ${PROJECT_NAME}_test COMMAND ${PROJECT_NAME}-ut)
