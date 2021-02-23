@@ -54,3 +54,8 @@ add_executable(${PROJECT_NAME} src/main.cpp)
 target_link_libraries(${PROJECT_NAME} ${PROJECT_NAME}-lib)
 
 set(FLAGS -g -Wall -Wextra -Werror -pedantic -Wconversion)
+target_compile_options(${PROJECT_NAME} PRIVATE ${FLAGS})
+
+add_executable(${PROJECT_NAME}-ut ${TEST_SRC_LIST})
+target_link_libraries(${PROJECT_NAME}-ut ${PROJECT_NAME}-lib gtest)
+target_compile_options(${PROJECT_NAME}-ut PRIVATE ${FLAGS})
