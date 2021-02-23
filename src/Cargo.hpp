@@ -4,7 +4,8 @@
 
 class Cargo {
 public:
-
+    Cargo& operator+=(const size_t addAmount);
+    Cargo& operator-=(const size_t subAmount);
 private:
     std::string name_;
     size_t amount_;
