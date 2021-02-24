@@ -13,3 +13,10 @@ TEST_F(TestCargo, checkCargoComparisionOperator) {
     ASSERT_TRUE(cargo==cargo2);
     ASSERT_FALSE(cargo==cargo3);
 }
+
+TEST_F(TestCargo, checkOperatorsAddandSub) {
+    cargo += 10;
+    ASSERT_EQ(cargo.getAmount(), 20);
+    cargo -= 5;
+    ASSERT_EQ(cargo.getAmount(), 15);
+}
