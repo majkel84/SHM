@@ -21,3 +21,15 @@ bool Cargo::operator==(Cargo cargo) {
     && cargo.basePrice_ == basePrice_
     && cargo.name_ == name_;
 }
+
+std::string Cargo::getName() {
+    return name_;
+}
+
+size_t Cargo::getAmount() {
+    return amount_;
+}
+
+double Cargo::gePrice() {
+    return basePrice_;
+}

@@ -9,6 +9,10 @@ public:
     Cargo& operator+=(const size_t addAmount);
     Cargo& operator-=(const size_t subAmount);
     bool operator==(Cargo cargo);
+
+    std::string getName();
+    size_t getAmount();
+    double gePrice();
 private:
     std::string name_;
     size_t amount_;
