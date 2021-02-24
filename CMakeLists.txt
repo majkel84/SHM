@@ -40,8 +40,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 project(SHM)
 
 set(SRC_LIST
-    src/Ship.cpp
     src/Cargo.cpp
+    src/Islands.cpp
+    src/Ship.cpp
 )
 
 set(TEST_SRC_LIST
