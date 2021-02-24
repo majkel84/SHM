@@ -48,6 +48,7 @@ set(SRC_LIST
 set(TEST_SRC_LIST
     test/test_main.cpp
     test/TestCargo.cpp
+    test/TestIslands.cpp
 )
 
 include_directories(src)
